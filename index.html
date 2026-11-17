@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=1100">
+  <title>Jyoti Sakhare</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+   /* Reset default browser styles */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+/* Body styling */
+body {
+  font-family: 'Poppins', sans-serif; /* Google font */
+  background: #F8FAFC; /* Dark background for the whole page */
+  color: #113260; /* Default text color */
+  line-height: 1.6; /* Better readability */
+}
+
+/* Header sticky nav bar */
+header {
+  position: sticky; /* Sticks to top on scroll */
+  top: 0;
+  background: #020617; /* Dark nav background */
+  z-index: 100; /* Make sure it stays above other content */
+}
+
+/* Navigation bar */
+nav {
+  max-width: 1100px; /* Center nav content */
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Logo left, menu right */
+  align-items: center;
+}
+
+/* Site title */
+nav h1 { 
+  color: #310ca0; 
+}
+
+/* Navigation menu */
+nav ul {
+  display: flex;
+  gap: 20px; /* space between menu items */
+  flex-wrap: wrap; /* wrap on smaller screens */
+}
+
+nav ul li { 
+  list-style: none; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #b0caff;
+  font-weight: 500;
+}
+
+nav ul li a:hover { 
+  color: #a78bfa; /* Highlight on hover */
+}
+
+/* HERO SECTION */
+.hero {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+  display: flex; /* Image and text side by side */
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero img { 
+  width: 400px; 
+  border-radius: 10px; /* Rounded image */
+}
+
+.hero h2 { 
+  font-size: 2.5rem; 
+  color: #754dec; 
+}
+
+.hero span { 
+  color: #2e234f; 
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  color: #05217e; /* Slightly lighter text for paragraph */
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #b19cf0;
+  color: #020617;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.btn:hover { 
+  background: #c4b5fd; /* Lighter hover effect */
+}
+
+/* GENERAL SECTION STYLING */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+section h2,
+.hero h2,
+#internship h2 {
+  display: block;              /* ensure block element */
+  text-align: center;          /* center text */
+  margin: 0 auto 40px auto;    /* center block horizontally */
+  font-size: 2rem;
+  color: #111872;
+  position: relative;
+  cursor: default;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: lift and color change */
+section h2:hover,
+.hero h2:hover,
+#internship h2:hover {
+  transform: translateY(-5px);
+  color: #5B4BFF;
+}
+
+/* Underline animation */
+section h2::after,
+.hero h2::after,
+#internship h2::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: #5B4BFF;
+  margin: 6px auto 0; /* center the underline */
+  transition: width 0.4s ease;
+}
+
+section h2:hover::after,
+.hero h2:hover::after,
+#internship h2:hover::after {
+  width: 50%; /* expand underline on hover */
+}
+/* ABOUT SECTION */
+.about-container {
+  display: flex;
+  align-items: center; /* Align image and text at the top */
+  justify-content: flex-start;
+  gap: 0; /* Normal gap removed */
+}
+
+.about-container div + div {
+  margin-left: 120px; /* Move the description 20px closer to the image */
+  width: 550px;
+  color: #0f0f23;
+  
+
+}
+.about-container ul{
+  margin-left: 55px;
+}
+
+.about-img {
+  width: 320px;
+  border-radius: 10px;
+}
+
+/* SKILLS SECTION */
+#skills {
+  padding: 40px 15px;
+  background: white;
+  color: #2d147a;
+}
+
+.skill-category {
+  margin-bottom: 25px;
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  border-left: 3px solid #FBBF24;
+  padding-left: 6px;
+  color: #1e0c5f;
+}
+
+/* Grid for all skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 8px;
+}
+
+/* Skill card */
+.skill {
+  background: #1E293B;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Tools & Soft Skills */
+.skill.tools {
+  background: #1E293B;
+}
+
+.skill.soft {
+  background: #1E293B;
+  height:50px;
+}
+
+/* Icon */
+.skill i {
+  font-size: 18px;
+  margin-bottom: 3px;
+  color: #FBBF24;
+  transition: color 0.3s ease;
+}
+
+/* Text */
+.skill span {
+  display: block;
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: #F9FAFB;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect (ALL skills) */
+.skill:hover {
+  transform: translateY(-2px);
+  background: #6ac6f5;
+}
+
+/* Text & icon color on hover */
+.skill:hover span {
+  color: #05217e;
+}
+
+.skill:hover i {
+  color: #05217e;
+}
+
+/* Tools hover */
+.skill.tools:hover {
+  background: #6ac6f5;
+}
+
+/* Soft skills hover */
+.skill.soft:hover {
+  background: #6ac6f5;
+}
+
+.skill.soft:hover span,
+.skill.soft:hover i {
+  color: #05217e;
+}
+/* ===== PROJECTS SECTION ===== */
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.tech-heading {
+  max-width: 1100px;
+  margin: 50px auto 24px;
+  padding: 0 20px;
+  font-size: 2rem;
+  color: #7d0396;
+  text-align: left;
+}
+
+/* Default grid (Python, Web, C++): centered cards */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 340px));
+  justify-content: center;
+  gap: 28px;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* PROJECT CARD */
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #b6e5fb;
+  border-radius: 16px;
+  padding: 26px 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(109, 40, 217, 0.3);
+}
+
+.project-card h3 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  margin: 0 0 14px;
+  color: #222;
+}
+
+.project-card ul {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.project-card li {
+  margin-bottom: 8px;
+}
+
+/* TECH TAGS */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tags span {
+  background: #057ded;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.project-card .tech-tags {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.project-card .btn {
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 10px 24px;
+}
+
+/* FEATURED CARD */
+.project-card.featured {
+  border: 2px solid #6d28d9;
+}
+
+.project-card.featured h3 {
+  font-size: 1.4rem;
+  padding-right: 100px;
+}
+
+.project-card.featured .tech-tags {
+  margin-top: auto;
+}
+
+.project-card .badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 5px 14px;
+  background: #6d28d9;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+}
+/* ===== JAVA SECTION: 2 cards per row ===== */
+.java-grid {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: stretch;
+}
+
+.java-grid .project-card,
+.java-grid .project-card.wide {
+  grid-column: auto;
+}
+
+/* If the last card is alone on its row, stretch it across */
+.java-grid .project-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+/* MOBILE: 1 per row */
+@media (max-width: 768px) {
+  .projects-container,
+  .java-grid {
+    grid-template-columns: 1fr;
+  }
+  .java-grid .project-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
+/* ===== ACHIEVEMENTS ===== */
+.achievements-section {
+  background: white;
+  color: #fff;
+}
+
+.achievements-container {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.achievement-cards {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.achievement-card {
+  background: #15152e;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(221, 0, 255, 0.3);
+}
+
+.achievement-card h3 {
+  color: #00e5ff;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.achievement-card p {
+  font-size: 14px;
+  color: #dcdcff;
+}
+
+/* Last card alone on its row: stretch across */
+.achievement-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+/* PREVIEW: same size for every certificate */
+.achievement-image {
+  position: sticky;
+  top: 90px;
+  align-self: flex-start;
+  flex-shrink: 0;
+  width: 340px;
+}
+
+.achievement-image img,
+.achievement-image iframe {
+  display: block;
+  width: 340px;
+  height: 480px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.achievement-image span {
+  display: block;
+  margin-top: 12px;
+  color: #3535f2;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .achievements-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .achievement-cards {
+    grid-template-columns: 1fr;
+  }
+  .achievement-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+  .achievement-image,
+  .achievement-image img,
+  .achievement-image iframe {
+    position: static;
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+
+/* FOOTER */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+
+}
+
+/* EDUCATION CARDS */
+.edu-row {
+  display: flex; /* Display cards in a row */
+  gap: 20px; 
+  margin-bottom: 20px;
+}
+
+.edu-card {
+  flex: 1; /* equal width cards */
+  background-color: #0f0f23; /* dark card background */
+  color: #dcdcff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* subtle shadow */
+  transition: transform 0.7s; /* smooth hover effect */
+}
+
+.edu-card:hover {
+  transform: translateY(-8px); /* lift effect on hover */
+}
+
+.edu-links a {
+  color: #a6a6ff; 
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.edu-links a:hover {
+  text-decoration: underline;
+  color: #fff; /* Highlight on hover */
+}
+
+/* RESPONSIVE STYLING */
+@media (max-width: 768px) {
+  .hero,
+  .about-container,
+  .achievements-section {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+  }
+
+  .hero img { 
+    width: 220px; /* smaller image for mobile */
+  }
+}
+
+  /* ===== INTERNSHIP SECTION ===== */
+    #internship {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+      
+    }
+
+    #internship h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #111872;
+      align-items: center;
+    }
+
+    /* Slider wrapper */
+    .internship-slider {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    /* Internship card */
+    .internship-card {
+      width: 620px;
+      background: #020617;
+      color: #e5e7eb;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      display: none;              /* hide all cards */
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      text-align: left;
+    }
+
+    .internship-card.active {
+      display: block;             /* show only active card */
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .internship-card h3 {
+      color: #c4b5fd;
+      margin-bottom: 10px;
+    }
+
+    .internship-card ul {
+      padding-left: 18px;
+      margin: 10px 0;
+    }
+
+    .tech {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #a78bfa;
+    }
+
+    /* Arrows */
+    .slider-arrow {
+      background: #1e1b4b;
+      color: #c4b5fd;
+      border: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .slider-arrow:hover {
+      background: #4338ca;
+      color: #fff;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .internship-card {
+        width: 100%;
+      }
+    }
+    section h1{
+      color: #111872;
+      margin-bottom: 25px;
+      font-size: 2rem;
+      align-items: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>Jyoti Sakhare</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<main class="hero">
+  <div data-aos="fade-right">
+    <h1>Hi, I'm <span>Jyoti</span></h1>
+    <h3>I am a <span id="element"></span></h3>
+    <p>Java & Web Developer focused on building scalable, user-friendly applications.</p>
+    <a href="pdf/Jyoti_Resume.pdf" class="btn" target="_blank">View Resume</a>
+    <a href="pdf/Jyoti_Resume.pdf" class="btn" download>Download Resume</a>
+  </div>
+
+  <div data-aos="fade-left">
+    <img src="image/developer.png" alt="Jyoti">
+  </div>
+</main>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 data-aos="fade-up">About Me</h2>
+
+  <div class="about-container">
+    <div data-aos="fade-right">
+      <img src="image/Jyoti.jpg" alt="Jyoti" class="about-img">
+    </div>
+
+    <div data-aos="fade-left">
+      <u><h3>Aspiring Software Engineer – Java & Python</h3></u>
+      <p>
+        MCA graduate (University Rank 1, 9.35 CGPA) with hands-on experience from three internships. I design and build secure, scalable REST APIs and microservices with Java and Spring Boot, backed by React front ends and MySQL, PostgreSQL and MongoDB, and deployed with Docker and CI/CD. I also build Python backends with Django and Flask, and I work in Agile/Scrum teams.
+        </p>
+        <p> <b>Key Points :-</b></p>
+       <p>
+            <Ul>
+              <li>University Rank 1 in MCA (9.35 CGPA)</li>
+              <li>2 internships in Java Full Stack and Python/Django development</li>
+              <li>Built and documented secure REST APIs (JWT, Swagger/OpenAPI)</li>
+              <li>Experience with unit and API testing (JUnit, Mockito, Postman)</li>
+              <li>Currently building an AI-powered job application automation platform with Spring Boot</li>
+        </Ul>
+        </p>
+     
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-container">
+
+    <!-- Programming Languages -->
+    <div class="skill-category">
+      <h3>Programming Languages</h3>
+      <div class="skills">
+        <div class="skill"><i class="devicon-java-plain"></i><span>Java (8/11/17)</span></div>
+        <div class="skill"><i class="devicon-python-plain"></i><span>Python</span></div>
+        <div class="skill"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+        <div class="skill"><i class="devicon-cplusplus-plain"></i><span>C/C++</span></div>
+        <div class="skill"><i class="devicon-azuresqldatabase-plain"></i><span>SQL</span></div>
+      </div>
+    </div>
+
+    <!-- Backend (Java) -->
+    <div class="skill-category">
+      <h3>Backend (Java)</h3>
+      <div class="skills">
+        <div class="skill"><i class="devicon-spring-original"></i><span>Spring Boot</span></div>
+        <div class="skill"><i class="devicon-spring-original"></i><span>Spring MVC</span></div>
+        <div class="skill"><i class="devicon-spring-original"></i><span>Spring Security</span></div>
+        <div class="skill"><i class="devicon-hibernate-plain"></i><span>JPA / Hibernate</span></div>
+        <div class="skill"><span>JWT</span></div>
+        <div class="skill"><span>REST APIs</span></div>
+      </div>
+    </div>
+
+    <!-- Microservices -->
+    <div class="skill-category">
+      <h3>Microservices</h3>
+      <div class="skills">
+        <div class="skill"><span>API Gateway</span></div>
+        <div class="skill"><span>Eureka</span></div>
+        <div class="skill"><i class="devicon-apachekafka-original"></i><span>Kafka</span></div>
+        <div class="skill"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+      </div>
+    </div>
+
+    <!-- Backend (Python) -->
+    <div class="skill-category">
+      <h3>Backend (Python)</h3>
+      <div class="skills">
+        <div class="skill"><i class="devicon-django-plain"></i><span>Django</span></div>
+        <div class="skill"><i class="devicon-flask-original"></i><span>Flask</span></div>
+        <div class="skill"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
+        <div class="skill"><span>REST APIs</span></div>
+      </div>
+    </div>
+
+    <!-- Frontend -->
+    <div class="skill-category">
+      <h3>Frontend</h3>
+      <div class="skills">
+        <div class="skill"><i class="devicon-react-original"></i><span>React.js</span></div>
+        <div class="skill"><i class="devicon-angularjs-plain"></i><span>Angular</span></div>
+        <div class="skill"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+        <div class="skill"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+        <div class="skill"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+        <div class="skill"><i class="devicon-bootstrap-plain"></i><span>Bootstrap</span></div>
+      </div>
+    </div>
+
+    <!-- Databases -->
+    <div class="skill-category">
+      <h3>Databases</h3>
+      <div class="skills">
+        <div class="skill"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+        <div class="skill"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+        <div class="skill"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+        <div class="skill"><i class="devicon-oracle-original"></i><span>Oracle SQL</span></div>
+        <div class="skill"><span>Query Optimization</span></div>
+      </div>
+    </div>
+
+    <!-- Cloud & DevOps -->
+    <div class="skill-category">
+      <h3>Cloud &amp; DevOps</h3>
+      <div class="skills">
+        <div class="skill tools"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS (EC2, S3)</span></div>
+        <div class="skill tools"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+        <div class="skill tools"><i class="devicon-kubernetes-plain"></i><span>Kubernetes (Basics)</span></div>
+        <div class="skill tools"><i class="devicon-jenkins-line"></i><span>Jenkins</span></div>
+        <div class="skill tools"><i class="devicon-maven-plain"></i><span>Maven</span></div>
+        <div class="skill tools"><span>CI/CD</span></div>
+      </div>
+    </div>
+
+    <!-- Testing & Quality -->
+    <div class="skill-category">
+      <h3>Testing &amp; Quality</h3>
+      <div class="skills">
+        <div class="skill tools"><span>JUnit 5</span></div>
+        <div class="skill tools"><span>Mockito</span></div>
+        <div class="skill tools"><i class="devicon-postman-plain"></i><span>Postman</span></div>
+        <div class="skill tools"><i class="devicon-swagger-plain"></i><span>Swagger / OpenAPI</span></div>
+        <div class="skill tools"><i class="devicon-sonarqube-original"></i><span>SonarQube</span></div>
+        <div class="skill tools"><span>Code Reviews</span></div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-category">
+      <h3>Tools</h3>
+      <div class="skills">
+        <div class="skill tools"><i class="devicon-git-plain"></i><span>Git</span></div>
+        <div class="skill tools"><i class="devicon-github-original"></i><span>GitHub</span></div>
+        <div class="skill tools"><i class="devicon-jira-plain"></i><span>Jira</span></div>
+        <div class="skill tools"><i class="devicon-intellij-plain"></i><span>IntelliJ IDEA</span></div>
+        <div class="skill tools"><i class="devicon-vscode-plain"></i><span>VS Code</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Internship-->
+<section id="internship">
+  <h2 data-aos="fade-up">Internship Experience</h2>
+
+  <div class="internship-slider">
+    <!-- Left Arrow -->
+    <button class="slider-arrow" onclick="prevSlide()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Card 1: Advanto -->
+    <div class="internship-card">
+      <h3>Java Full Stack Intern</h3>
+      <p><strong>Company:</strong> Advanto Software Pvt. Ltd., Pune</p>
+      <p><strong>Duration:</strong> Aug 2025 – Jan 2026</p>
+      <p><strong>Key Points:</strong></p>
+      <ul>
+        <li>Built application modules using Java, Spring Boot and React.js</li>
+        <li>Designed and documented REST APIs with Swagger/OpenAPI</li>
+        <li>Secured endpoints with Spring Security and JWT authentication</li>
+        <li>Worked with Spring Data JPA, Hibernate, MySQL, Oracle SQL and PL/SQL</li>
+        <li>Wrote unit tests with JUnit and Mockito; tested APIs with Postman</li>
+        <li>Worked in Agile/Scrum sprints and used GitHub Copilot for coding and debugging support</li>
+      </ul>
+      <p><strong>Tech Stack:</strong></p>
+      <p class="tech">Java, Spring Boot, React.js, Spring Security, JWT, JPA/Hibernate, MySQL, Oracle, JUnit, Mockito, Swagger, Git</p><br>
+      <a href="" class="btn" target="_blank">Certificate</a>
+    </div>
+
+    <!-- Card 2: ExcelR -->
+    <div class="internship-card">
+      <h3>Python &amp; Django Intern</h3>
+      <p><strong>Company:</strong> ExcelR (Remote)</p>
+      <p><strong>Duration:</strong> Oct 2024 – Mar 2025</p>
+      <p><strong>Key Points:</strong></p>
+      <ul>
+        <li>Developed backend modules using Python and Django</li>
+        <li>Built REST APIs and managed data with Django ORM and MySQL</li>
+        <li>Implemented authentication and authorization features</li>
+        <li>Tested applications, fixed bugs and managed code with Git</li>
+        <li>Django ORM and migrations is core Django knowledge. Almost every Django interviewer asks about models, relationships and migrations, so it’s easy for you to explain.</li>
+        <li>MVT and OOP shows you understand how Django is structured, not just that you used it.</li>
+      </ul>
+      <p><strong>Tech Stack:</strong></p>
+      <p class="tech">Python, Django, REST APIs, Django ORM, MySQL, Git</p><br>
+      <a href="pdf/Internship Certificate.pdf" class="btn" target="_blank">Certificate</a>
+    </div>
+
+    <!-- Right Arrow -->
+    <button class="slider-arrow" onclick="nextSlide()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+
+<section id="projects">
+  <h2 data-aos="fade-up">Projects</h2>
+
+  <!-- JAVA FULL STACK PROJECTS -->
+  <h3 class="tech-heading" data-aos="fade-up">Java Full Stack Projects</h3>
+  <div class="projects-container java-grid">
+
+    <div class="project-card featured" data-aos="fade-up">
+      <span class="badge">Featured</span>
+      <h3>AI Job Auto Apply Platform</h3>
+      <ul>
+        <li>Full-stack platform that automates job search and applications, with resume analysis and career tools</li>
+        <li>Built secure authentication, profile and resume management modules with REST APIs</li>
+        <li>Uses a local LLM (Ollama, LLaMA3) for ATS scoring, skill-gap detection and resume improvement</li>
+        <li>Includes AI career coach and mock interview modules, with a React.js dashboard for tracking applications</li>
+      </ul>
+      <div class="tech-tags">
+        <span>Java</span><span>Spring Boot</span><span>React.js</span><span>PostgreSQL</span><span>REST APIs</span><span>Ollama</span>
+      </div>
+      <a href="YOUR-GITHUB-LINK" class="btn" target="_blank">GitHub</a>
+    </div>
+    <div class="project-card" data-aos="fade-up">
+      <h3>Bank Management System</h3>
+      <ul>
+        <li>Secure banking application with JWT authentication and role-based access for customers, tellers and admins</li>
+        <li>Transactional fund transfers using Spring's @Transactional</li>
+        <li>Unit tested with JUnit and Mockito, tested with Postman, documented with Swagger/OpenAPI</li>
+      </ul>
+      <div class="tech-tags">
+        <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JPA/Hibernate</span><span>MySQL</span>
+      </div>
+      <a href="YOUR-GITHUB-LINK" class="btn" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+      <h3>Hospital Management System</h3>
+      <ul>
+        <li>REST APIs for patient registration, appointments, medical records and billing</li>
+        <li>JWT security with role-based access for admin, doctor and receptionist</li>
+        <li>React.js front end connected to a Spring Boot backend</li>
+      </ul>
+      <div class="tech-tags">
+        <span>Java</span><span>Spring Boot</span><span>React.js</span><span>Hibernate</span><span>MySQL</span>
+      </div>
+      <a href="YOUR-GITHUB-LINK" class="btn" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+      <h3>Job Portal</h3>
+      <ul>
+        <li>Job seekers search and apply for jobs; recruiters post and manage openings</li>
+        <li>Role-based access with Spring Security; CRUD with Spring Data JPA and Hibernate</li>
+        <li>Optimized SQL queries and tested APIs with Postman</li>
+      </ul>
+      <div class="tech-tags">
+        <span>Java</span><span>Spring Boot</span><span>React.js</span><span>MySQL</span>
+      </div>
+      <a href="https://github.com/jyoti976725/job-portal-spring-boot.git" class="btn" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <!-- PYTHON PROJECTS -->
+  <h3 class="tech-heading" data-aos="fade-up">Python Projects</h3>
+  <div class="projects-container">
+    <div class="project-card" data-aos="fade-up">
+      <h3>Smart Wedding Planner</h3>
+      <ul>
+        <li>Manages customers, vendors, bookings, event schedules and payments</li>
+        <li>RESTful APIs with role-based access and input validation</li>
+        <li>Optimized SQL queries; responsive UI with Bootstrap</li>
+      </ul>
+      <div class="tech-tags">
+        <span>Python</span><span>Flask</span><span>MySQL</span><span>Bootstrap</span>
+      </div>
+      <a href="https://github.com/jyoti976725/Destination-Wedding.git" class="btn" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <!-- WEB PROJECTS -->
+  <h3 class="tech-heading" data-aos="fade-up">Web Projects</h3>
+  <div class="projects-container">
+    <div class="project-card" data-aos="fade-up">
+      <h3>Tour Travels Website</h3>
+      <ul>
+        <li>Travel website to view and book tours</li>
+        <li>Admin panel to update tours and prices</li>
+      </ul>
+      <div class="tech-tags">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+      </div>
+      <a href="https://github.com/jyoti976725/Tour-Travels-Website-PHP.git" class="btn" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+      <h3>Portfolio Website</h3>
+      <ul>
+        <li>Responsive portfolio with About, Skills, Experience, Projects, Education and Contact sections</li>
+        <li>Slider, scroll animations and certificate previews</li>
+      </ul>
+      <div class="tech-tags">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      </div>
+      <a href="https://github.com/jyoti976725/Portfolio.git" class="btn" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <!-- C++ PROJECTS -->
+  <h3 class="tech-heading" data-aos="fade-up">C++ Projects</h3>
+  <div class="projects-container">
+    <div class="project-card" data-aos="fade-up">
+      <h3>Student Management System</h3>
+      <ul>
+        <li>Console app to add, view and delete student records</li>
+        <li>Uses OOP and file handling for storage</li>
+      </ul>
+      <div class="tech-tags">
+        <span>C++</span><span>OOP</span><span>File Handling</span>
+      </div>
+      <a href="https://github.com/jyoti976725/Student-Management-System-C-.git" class="btn" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+      <h3>Tic-Tac-Toe Game</h3>
+      <ul>
+        <li>Two-player console game with turn-based play</li>
+        <li>Win and draw detection using loops and OOP</li>
+      </ul>
+      <div class="tech-tags">
+        <span>C++</span><span>OOP</span><span>Loops</span>
+      </div>
+      <a href="https://github.com/jyoti976725/Tic-Tac-Toe-Game-C-.git" class="btn" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="edu-row">
+    <!-- MCA -->
+    <div class="edu-card">
+      <h3>MCA</h3>
+      <p>Sanjay Ghodawat University kolhapur</p>
+      <p>CGPA: 9.35</p>
+      <p class="edu-links">
+        <a href="image/MCA mark.jpeg" target="_blank">Marksheet</a>
+        &nbsp;&nbsp;
+        <a href="pdf/MCA certificate.pdf" target="_blank">Certificate</a>
+      </p>
+    </div>
+
+    <!-- BCA -->
+    <div class="edu-card">
+      <h3>BCA</h3>
+      <p>Shivraj College Gadhinglaj</p>
+      <p>CGPA: 8.65</p>
+      <p class="edu-links">
+        <a href="image/BCA mark.jpeg" target="_blank">Marksheet</a>
+        &nbsp;&nbsp;
+        <a href="image/BCA certificate.jpeg" target="_blank">Certificate</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="edu-row">
+    <!-- 12th -->
+    <div class="edu-card">
+      <h3>12th</h3>
+      <p>Sadhana Jr College Gadhinglaj</p>
+      <p>Percentage: 85%</p>
+      <p class="edu-links">
+        <a href="pdf/12 result.pdf" target="_blank">Marksheet</a>
+        &nbsp;&nbsp;
+        <a href="pdf/12 certificate.pdf" target="_blank">Certificate</a>
+      </p>
+    </div>
+
+    <!-- 10th -->
+    <div class="edu-card">
+      <h3>10th</h3>
+      <p>New English School Nool</p>
+      <p>Percentage: 84%</p>
+      <p class="edu-links">
+        <a href="pdf/10 result.pdf" target="_blank">Marksheet</a>
+        &nbsp;&nbsp;
+        <a href="pdf/10 certificate.pdf" target="_blank">Certificate</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section id="achievements" class="achievements-section">
+  <h2 data-aos="fade-up">Achievements &amp; Certifications</h2>
+
+  <div class="achievements-container">
+
+    <!-- Cards -->
+    <div class="achievement-cards">
+      <div class="achievement-card" data-file="image/firstrank.jpg">
+        <h3>🏆 University Rank Holder</h3>
+        <p>MCA – Rank 1 (CGPA 9.35) | Sanjay Ghodawat University</p>
+      </div>
+
+      <div class="achievement-card" data-file="image/Testing.png">
+        <h3>🧪 Software Testing Certification</h3>
+        <p>Advanto Software</p>
+      </div>
+    
+      <div class="achievement-card" data-file="image/Pythonintern.png">
+        <h3>🐍 Python Full Stack</h3>
+        <p>ExcelR</p>
+      </div>
+
+      <div class="achievement-card" data-file="image/infosys-agile.jpg">
+        <h3>📘 Software Engineering &amp; Agile</h3>
+        <p>Infosys Springboard</p>
+      </div>
+
+      <div class="achievement-card" data-file="image/edunet-fullstack.jpg">
+        <h3>🌐 Full Stack Web Development</h3>
+        <p>Edunet Foundation</p>
+      </div>
+
+      <div class="achievement-card" data-file="image/Java.jpg">
+        <h3>☕ Core &amp; Advanced Java</h3>
+        <p>CodeExpert Technology, 2024</p>
+      </div>
+
+      <div class="achievement-card" data-file="image/Python.jpg">
+        <h3>📜 Python Programming &amp; GUI</h3>
+        <p>CodeExpert Technology, 2024</p>
+      </div>
+
+      <div class="achievement-card" data-file="image/olimpid.jpeg">
+        <h3>💻 Computer Intelligence Olympiad</h3>
+        <p>Inter-school competition</p>
+      </div>
+
+      <div class="achievement-card" data-file="pdf/TYPING CERTIFICATE.pdf">
+        <h3>⌨️ GCC-TBC Typing</h3>
+        <p>English Typing 30 WPM</p>
+      </div>
+    </div>
+
+    <!-- Preview -->
+    <div class="achievement-image" id="preview">
+      <img src="image/firstrank.jpg" alt="Certificate Preview">
+      <b><span id="previewText">University Rank Holder</span></b>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div style="font-size:28px; display:flex; justify-content:center; gap:25px;">
+    <a href="https://www.linkedin.com/in/jyoti-sakhare-7289b0250" style="color:#0955ef;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/jyoti976725" style="color:#101011;"><i class="fab fa-github"></i></a>
+    <a href="mailto:jyotisakhare9767@gmail.com" style="color:#EA4335;"><i class="fas fa-envelope"></i></a>
+    <!-- Call -->
+  <a href="tel:+919767252025" title="Call Me">
+    <i class="fa-solid fa-phone"></i>
+    <small>
+  <a href="tel:+919767252025" style="font-size: 14px; text-decoration: none; color: black;">
+    +91 9767252025
+  </a>
+</small>
+  </a>
+
+  <!-- Location -->
+  <a href="https://www.google.com/maps/place/Pune,+Maharashtra,+India" target="_blank" title="Location">
+    <i class="fa-solid fa-location-dot"></i>
+   <small>
+  <a href="#" style="font-size: 14px; text-decoration: none; color: black;">
+    Pune, Maharashtra
+  </a>
+</small>
+   
+  </a>
+  </a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Jyoti | Software Developer
+</footer>
+
+<!-- Typed.js -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  new Typed('#element', {
+    strings: ['Software Developer  '],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+<script>
+  const cards = document.querySelectorAll(".internship-card");
+  let currentIndex = 0;
+
+  function showCard(index) {
+    cards.forEach(card => card.classList.remove("active"));
+    cards[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showCard(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    showCard(currentIndex);
+  }
+
+  // Initial load
+  showCard(currentIndex);
+</script>
+
+<!-- ================= JS ================= -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+  const achievementCards = document.querySelectorAll(".achievement-card");
+  const preview = document.getElementById("preview");
+  const previewText = document.getElementById("previewText");
+
+  achievementCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const file = card.dataset.file;
+      previewText.textContent = "Certificate Preview";
+
+      preview.querySelectorAll("img, iframe").forEach(el => el.remove());
+
+      if (file.endsWith(".pdf")) {
+        const iframe = document.createElement("iframe");
+        iframe.src = file;
+        iframe.style.border = "none";
+        preview.prepend(iframe);
+      } else {
+        const img = document.createElement("img");
+        img.src = file;
+        preview.prepend(img);
+      }
+    });
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+</body>
+</html>
